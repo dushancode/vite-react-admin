@@ -5,19 +5,19 @@ export const categorySlice = apiSlice.injectEndpoints({
     endpoints: (builder) => ({
         categoryAllGet: builder.query({
             query: () => ({
-                url: '/category/main/all',
+                url: '/categories/main/all',
                 method: 'GET',
             })
         }),
         subCategoryAllGet: builder.query({
             query: () => ({
-                url: 'category/sub/all',
+                url: '/categories/sub/all',
                 method: 'GET',
             })
         }),
         categoryCreate: builder.mutation({
             query: (data) => ({
-                url: '/category/main/store',
+                url: '/categories/main/store',
                 method: 'POST',
                 body: data
             })
@@ -25,7 +25,7 @@ export const categorySlice = apiSlice.injectEndpoints({
        
         subCategoryCreate: builder.mutation({
             query: (data) => ({
-                url: '/category/sub/store',
+                url: '/categories/sub/store',
                 method: 'POST',
                 body: data      
             })
